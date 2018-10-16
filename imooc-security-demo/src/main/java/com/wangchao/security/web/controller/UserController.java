@@ -10,9 +10,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/user")
 public class UserController {
 
-    @RequestMapping(value = "/user",method = RequestMethod.GET)
+
+    @PostMapping
+    public User create(@RequestBody User user){
+        System.out.println(user.toString());
+        user.setId("1");
+        return user;
+    }
+
+    @GetMapping
     @JsonView(User.UserSimpleView.class)
     public List<User> query(UserQueryCondition userQueryCondition, Pageable pageable){
 

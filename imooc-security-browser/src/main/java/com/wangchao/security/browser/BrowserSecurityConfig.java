@@ -1,5 +1,7 @@
 package com.wangchao.security.browser;
 
+import com.wangchao.security.core.properties.SecurityProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,6 +12,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    private SecurityProperties securityProperties;
+
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
@@ -18,11 +23,11 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin()
-                .loginPage("/imooc-signIn.html")
+                .loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")
 //        http.httpBasic()
                 .and().authorizeRequests()
-                .antMatchers("/imooc-signIn.html").permitAll()
+                .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage()).permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable();
     }

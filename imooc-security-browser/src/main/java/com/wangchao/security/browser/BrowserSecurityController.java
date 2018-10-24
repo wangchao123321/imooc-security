@@ -1,7 +1,7 @@
 package com.wangchao.security.browser;
 
-import com.wangchao.security.browser.support.SimpleResponse;
 import com.wangchao.security.core.properties.SecurityProperties;
+import com.wangchao.security.core.support.SimpleResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

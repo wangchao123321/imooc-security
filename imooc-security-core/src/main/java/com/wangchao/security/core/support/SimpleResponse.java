@@ -1,4 +1,4 @@
-package com.wangchao.security.browser.support;
+package com.wangchao.security.core.support;
 
 public class SimpleResponse {
 

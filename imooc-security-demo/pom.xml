@@ -24,9 +24,14 @@
     <dependencies>
         <dependency>
             <groupId>com.wangchao.security</groupId>
-            <artifactId>imooc-security-browser</artifactId>
+            <artifactId>imooc-security-app</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.wangchao.security</groupId>-->
+            <!--<artifactId>imooc-security-browser</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

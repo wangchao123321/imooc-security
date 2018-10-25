@@ -1,6 +1,6 @@
-//package com.wangchao.security.core.validate.code;
+//package com.wangchao.social.core.validate.code;
 //
-//import com.wangchao.security.core.validate.code.sms.SmsCodeSender;
+//import com.wangchao.social.core.validate.code.sms.SmsCodeSender;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 //import org.springframework.social.connect.web.SessionStrategy;

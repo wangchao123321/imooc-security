@@ -1,4 +1,4 @@
-//package com.wangchao.security.core.validate.code.sms;
+//package com.wangchao.social.core.validate.code.sms;
 //
 //public interface SmsCodeSender {
 //

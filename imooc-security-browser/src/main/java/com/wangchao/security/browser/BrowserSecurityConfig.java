@@ -13,6 +13,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
 
@@ -32,6 +33,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     private AuthenticationFailureHandler imoocAuthenticationFailHandler;
 
     @Autowired
+    private SpringSocialConfigurer imoocSocialSecurityConfigurer;
+
+    @Autowired
     private UserDetailsService userDetailsService;
 
     @Bean
@@ -44,7 +48,11 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin()
+
+        System.out.println(securityProperties.getBrowser().getLoginPage());
+        http
+//                .apply(imoocSocialSecurityConfigurer).and()
+                .formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")
                 .successHandler(imoocAuthenticationSuccessHandler)

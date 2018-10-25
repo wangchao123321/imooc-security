@@ -1,11 +1,11 @@
 ///**
 // *
 // */
-//package com.wangchao.security.core.validate.code;
+//package com.wangchao.social.core.validate.code;
 //
-//import com.wangchao.security.core.properties.SecurityProperties;
-//import com.wangchao.security.core.validate.code.sms.DefaultSmsCodeSender;
-//import com.wangchao.security.core.validate.code.sms.SmsCodeSender;
+//import com.wangchao.social.core.properties.SecurityProperties;
+//import com.wangchao.social.core.validate.code.sms.DefaultSmsCodeSender;
+//import com.wangchao.social.core.validate.code.sms.SmsCodeSender;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 //import org.springframework.context.annotation.Bean;
